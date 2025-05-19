@@ -12,15 +12,15 @@
   </head>
 
   <body>
+   <!-- Main navigation bar -->
      <nav class="menu">
       <img id="Logo" src="pic/bookpic.png" alt="Logo" />
 
       <ul>
-        <li><a class="menu-item" href="index.html">Home</a></li>
         <li><a class="menu-item" href="browse.html">Explore Books</a></li>
         <li><a class="menu-item" href="add-review.html">Share a Review</a></li>
         <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
-        <li><a class="menu-item" href="advanced-search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="search.html">Smart Search </a></li>
         <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
         <li><a class="menu-item" href="about.html">Who We Are?</a></li>
         <li><a class="menu-item" href="contact.html">Contact Us</a></li>
@@ -28,8 +28,7 @@
     
      </nav>
 
-    
-
+ <!-- Main background image -->
   <img id="library_img" src="pic/library.jpg" alte="Picture" >
 
   
@@ -38,11 +37,15 @@
   <p id="typing-text"></p>
 </div>
 
-</div>
+
+
   <footer>
     <p>© 2025 Umm Al-Qura University - All rights reserved.</p>
   </footer>
+
+
 <script>
+// Typing effect logic
 
 const text = "Read It. Rate It. Share It.";
 const typingElement = document.getElementById("typing-text");
@@ -65,11 +68,25 @@ function typeText() {
       isDeleting = false;
     }
   }
-
+   // Adjust typing speed
   setTimeout(typeText, isDeleting ? 50 : 150);
 }
 
 typeText();
+
+  // Add a tooltip to the logo image
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+// Redirect to homepage when logo is clicked
+function goToHomePage() {
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 200);
+}
+
+logo.addEventListener("click", goToHomePage);
+
 </script>
   </body>
 </html>
