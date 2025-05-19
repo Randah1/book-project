@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us-UQU BookHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pic/icon.png"/>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<link rel="stylesheet" href="css/styles.css">
+<body>
+  <header>
+    <nav class="menu">
+      <img id="Logo" src="pic/bookpic.png" alt="Logo" />
+      <ul>
+        
+        <li><a class="menu-item" href="browse.html">Explore Books</a></li>
+        <li><a class="menu-item" href="add-review.html">Share a Review</a></li>
+        <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
+        <li><a class="menu-item" href="advanced-search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
+        <li><a class="menu-item" href="about.html">Who We Are?</a></li>
+        <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="search-contact">
+    <form action="submit-contact.php" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="6" cols="50" required></textarea><br><br>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </main>
+<script>
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+function goToHomePage() {
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 800);
+}
+
+logo.addEventListener("click", goToHomePage);
+
+</script>
+  <footer>
+    <p>&copy; 2025 UQU Book Review Platform | Email: support@uqubooks.com</p>
+  </footer>
+</body>
+</html>
